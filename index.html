@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <!-- TO DO: реализовать смену темы на светлую -->
+    <title>Magic Dossier</title>
+    <link rel="icon" href="./src/images/star.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+  </head>
+  <body class="body">
+    <ul class="folder">
+      <li class="folder__cover">
+        <div class="cover">
+          <!-- обложка папки -->
+          <h1 class="cover__title">Досье Магии</h1>
+          <p class="cover__stamp">Секретно</p>
+          <button class="cover__button">Открыть</button>
+        </div>
+        <div class="folder__inside">
+          <!-- обратная сторона папки -->
+        </div>
+      </li>
+
+      <!-- листы -->
+      <li class="folder__pages">
+        <ul class="pages-list" id="pages-list">
+          <li class="pages__sheet"></li>
+        </ul>
+      </li>
+
+      <li class="folder__back-cover">
+        <!-- задник папки + лист для декорации -->
+        <div class="back-cover"></div>
+        <div class="back-cover__decoration"></div>
+      </li>
+    </ul>
+    <script src="src/scripts/index.js"></script>
+  </body>
+</html>

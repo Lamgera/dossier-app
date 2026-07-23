@@ -1,0 +1,174 @@
+@import url('../fonts/fonts.css');
+@import url('./utils/variables.css');
+@import url('./utils/globals.css');
+@import url('pages.css');
+
+.body {
+  background-color: var(--background-color);
+  font-family: var(--main-font);
+  color: var(--text-color);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-inline: auto; 
+  overflow: hidden;
+}
+
+.folder {
+  /* Центрирование */
+  position: relative;
+  margin-inline: var(--folder-margin);
+  background-color: var(--folder-color);
+  aspect-ratio: 210 / 297;
+  min-height: 80vh;
+  max-height: calc(100vh - 140px);
+  max-width: calc(100vw - 100px);
+  
+  perspective: 1500px;
+  transform-style: preserve-3d;
+
+  will-change: transform;
+  transform: translateZ(0);
+
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+
+/* Листы — средний слой (не поворачивается) */
+.folder__pages {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.pages-list {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: var(--pages-padding);
+  list-style: none;
+  margin: 0;
+}
+
+.pages__sheet {
+  background-color: var(--paper-color);
+  position: absolute;
+  aspect-ratio: 210 / 297;
+  height: calc(100% - var(--pages-padding) * 2);
+  right: var(--pages-padding);
+  top: var(--pages-padding);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+/* Обложка — самый верхний слой (поворачивается) */
+.folder__cover {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  
+  transform-origin: left center;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* технически - не используется, но лучше сохранить если на внутреннюю сторону обложки будет добавлено что-то */
+.folder__cover.animated {
+  transform: rotateY(-180deg);
+}
+
+
+/* передняя сторона обложки */
+.cover {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  
+  background-color: var(--folder-color);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 40%;
+  padding-inline: 10%;
+  overflow: hidden;
+}
+
+.cover__title {
+  font-family: var(--title-font);
+  text-transform: uppercase;
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  margin: 0;
+}
+
+.cover__stamp {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  font-size: clamp(1rem, 2.5vw, 1.8rem);
+  text-transform: uppercase;
+  color: var(--stamp-color);
+  border: 3px solid var(--stamp-color);
+  padding: 8px 16px;
+  opacity: 0.7;
+  pointer-events: none;
+  margin: 0;
+}
+
+.cover__button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  padding: 10px 20px;
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* внутренняя сторона обложки */
+.folder__inside {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  
+  background-color: var(--folder-color);
+  padding: var(--pages-padding);
+}
+
+.folder__back-cover {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.back-cover {
+  position: absolute;
+  inset: 0;
+  background-color: var(--folder-color);
+}
+
+.back-cover__decoration {
+  position: absolute;
+  inset: 10%;
+  background-color: var(--accent-paper-color);
+  
+  aspect-ratio: 210 / 297;
+  height: calc(95% - var(--pages-padding) * 2);
+  
+  right: 15%;
+  top: 10%;
+  transform: rotate(5deg);
+  
+  box-shadow: 0 2px 8px var(--shadow-color);
+  z-index: 1;
+}

@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
+  min-height: 100vh; 
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+picture {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+a {
+  border: 0px;
+  background-color: rgb(0,0,0,0);
+  color: currentColor;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* .visually-hidden{
+  visibility: hidden;
+  display: none
+} */

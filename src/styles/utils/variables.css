@@ -1,0 +1,20 @@
+:root {
+  --main-font: "Strong", system-ui, sans-serif;
+  --title-font: "Roboto Mono", system-ui, sans-serif;;
+  --folder-color: #342B2B;
+  --paper-color: #D9D9D9;
+  --accent-paper-color: #C7C7C7;
+  --background-color: #1D1818;
+  --accent-color: #C6B0B0;
+  --text-color: #000;
+  --stamp-color: #BA4C4E;
+  --shadow-color: #000;
+  --pages-padding: 30px;
+  --folder-margin: 50px;
+}
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+  --background-color: #111110;
+  }
+} */
