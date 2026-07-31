@@ -52,7 +52,7 @@
   margin: 0;
 }
 
-.pages__sheet {
+.pages__article {
   background-color: var(--paper-color);
   position: absolute;
   aspect-ratio: 210 / 297;
@@ -100,7 +100,7 @@
   overflow: hidden;
 }
 
-.cover__title {
+.cover-title {
   font-family: var(--title-font);
   text-transform: uppercase;
   font-size: clamp(2rem, 5vw, 4rem);
@@ -108,7 +108,7 @@
   margin: 0;
 }
 
-.cover__stamp {
+.cover-stamp {
   position: relative;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-15deg);
@@ -117,12 +117,11 @@
   color: var(--stamp-color);
   border: 3px solid var(--stamp-color);
   padding: 8px 16px;
-  opacity: 0.7;
   pointer-events: none;
   margin: 0;
 }
 
-.cover__button {
+.cover-button {
   position: absolute;
   bottom: 20px;
   right: 20px;

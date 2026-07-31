@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark light" />
-    <!-- TO DO: реализовать смену темы на светлую -->
+    <!-- <meta name="color-scheme" content="dark light" /> -->
+    <!-- можно реализовать две разные темы, но визуальный стиль предполагает одну -->
     <title>Magic Dossier</title>
     <link rel="icon" href="./src/images/star.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./src/styles/index.css" />
@@ -15,9 +15,9 @@
       <li class="folder__cover">
         <div class="cover">
           <!-- обложка папки -->
-          <h1 class="cover__title">Досье Магии</h1>
-          <p class="cover__stamp">Секретно</p>
-          <button class="cover__button">Открыть</button>
+          <h1 class="cover-title">Досье Магии</h1>
+          <p class="cover-stamp">Секретно</p>
+          <button class="cover-button">Открыть</button>
         </div>
         <div class="folder__inside">
           <!-- обратная сторона папки -->
@@ -27,9 +27,61 @@
       <!-- листы -->
       <li class="folder__pages">
         <ul class="pages-list" id="pages-list">
-          <li class="pages__sheet"></li>
+          <li class="pages__start">
+            <p class="start-tutorial"></p>
+          </li>
+          <li class="pages__dictionary">
+            <ul class="dictionary__list">
+              <li class="dictionary__list-item"></li>
+            </ul>
+          </li>
+          <li class="pages__article">
+            <h2 class="article-subject">Либр Бонфис</h2>
+            <img class="article-portrait" />
+            <ul class="article__summary">
+              <li class="summary-item">Название: Ангел</li>
+              <li class="summary-item">Контракт: —</li>
+              <li class="summary-item">
+                Магический облик: Розово-черное кольцо над головой, похожее на
+                нимб, а также белые небольшие крылья на спине (из-за их размера
+                способность к полету исключена). Нескрываемая деталь облика —
+                изображение розовой искры сзади на шее, такой же, как эффект от
+                использования способности.
+              </li>
+              <li class="summary-item">
+                Облик демида: Черные небольшие рога на голове (могут быть
+                скрыты)
+              </li>
+              <li class="summary-item">Важность: Крайне высокая</li>
+            </ul>
+            <p class="article-description">
+              Способность данного катализатора — магия лечения. С помощью неё
+              Либр может прямым прикосновением излечить пациента от внешних
+              увечий за несколько секунд (время может варьироваться от степени
+              увечий). Катализатор также способен избавить человека от легких
+              болезней, однако не в состоянии излечить его от патологий: их он
+              может лишь приостановить/улучшить состояние пациента на небольшой
+              срок, но болезнь при этом остается. При использовании способности
+              под ладонями Либра появляются многочисленные розовые искры —
+              простейший магический визуальный эффект.
+            </p>
+          </li>
         </ul>
       </li>
+
+      <!-- шаблон страницы -->
+      <!-- <li class="pages__article">
+            <h2 class="article-subject"></h2>
+            <img class="article-portrait">
+            <ul class="article__summary">
+              <li class="summary-item"></li>
+              <li class="summary-item"></li>
+              <li class="summary-item"></li>
+              <li class="summary-item"></li>
+              <li class="summary-item"></li>
+            </ul>
+            <p class="article-description"></p>
+          </li> -->
 
       <li class="folder__back-cover">
         <!-- задник папки + лист для декорации -->

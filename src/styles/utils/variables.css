@@ -1,20 +1,20 @@
 :root {
   --main-font: "Strong", system-ui, sans-serif;
   --title-font: "Roboto Mono", system-ui, sans-serif;;
-  --folder-color: #342B2B;
-  --paper-color: #D9D9D9;
-  --accent-paper-color: #C7C7C7;
-  --background-color: #1D1818;
+  --folder-color: #737A66;
+  --paper-color: #F6F7EB;
+  --accent-paper-color: #D5D7C8;
+  --background-color: #0F0F13;
   --accent-color: #C6B0B0;
-  --text-color: #000;
-  --stamp-color: #BA4C4E;
-  --shadow-color: #000;
+  --text-color: #1C0C0D;
+  --stamp-color: #931621;
+  --shadow-color: #34382E;
   --pages-padding: 30px;
   --folder-margin: 50px;
 }
 
-/* @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
   :root {
   --background-color: #111110;
   }
-} */
+}
