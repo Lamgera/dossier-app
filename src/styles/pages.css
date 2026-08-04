@@ -1,0 +1,40 @@
+.pages__article {
+  padding: 20px;
+  overflow: auto;
+  scrollbar-color: var(--accent-paper-color) #00000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.article-subject {
+  margin-bottom: 15px;
+  font-size: clamp(14px, 10px + 1.2vw, 24px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.article-portrait {
+  float: left;
+  width: 100%;
+  max-width: 33%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  margin: 0 15px 5px 0;
+  display: block;
+}
+
+.summary-item {
+  margin-bottom: 8px;
+}
+
+.summary-label {
+  font-weight: 700;
+}
+
+.article-description {
+  margin-top: 16px;
+}

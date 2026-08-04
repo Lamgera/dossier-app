@@ -7,8 +7,8 @@
 }
 
 @font-face {
-  font-family: 'Strong';
-  src: url('./Strong-Regular.ttf') format('truetype-variations');
+  font-family: 'Victor Mono';
+  src: url('./VictorMono.ttf') format('truetype-variations');
   font-weight: 300 700;
   font-style: normal;
   font-display: swap;

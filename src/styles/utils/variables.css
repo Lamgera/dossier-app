@@ -1,11 +1,11 @@
 :root {
-  --main-font: "Strong", system-ui, sans-serif;
+  --main-font: "Victor Mono", system-ui, sans-serif;
   --title-font: "Roboto Mono", system-ui, sans-serif;;
   --folder-color: #737A66;
   --paper-color: #F6F7EB;
   --accent-paper-color: #D5D7C8;
   --background-color: #0F0F13;
-  --accent-color: #C6B0B0;
+  --accent-color: #ff8ba5;
   --text-color: #1C0C0D;
   --stamp-color: #931621;
   --shadow-color: #34382E;
