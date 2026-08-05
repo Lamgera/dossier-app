@@ -30,19 +30,35 @@
           <ul class="bookmarks__list" id="bookmarks-list"></ul>
         </nav>
         <ul class="pages-list" id="pages-list">
-          <li class="page" data-page-id="glossary" data-tab="?">
-            <p class="glossary">
+          <li class="glossary page" data-page-id="glossary" data-tab="?">
+            <p>
               В этом документе хранятся записи о всех (или практически всех)
               магов и их способностей. Вы можете просматривать разные досье,
-              нажимая на закладки сверху. 
-              Если вы не знакомы с терминами, на
-              этой странице вам предоставлен краткий словарь, к которому вы
-              всегда можете вернуться, нажав на первую закладку в списке.
-
-              <button class="page-hint" type="button" data-unlock="stanley">
-              Автор: Стенли Хьюз
-              </button>
+              нажимая на закладки сверху.
             </p>
+            <p>
+              Если вы не знакомы с терминами, на этой странице вам предоставлен
+              краткий словарь, к которому вы всегда можете вернуться, нажав на
+              первую закладку в списке.
+            </p>
+            <ul class="glossary__list">
+              <li class="glossary__list-item">
+                <span class="label">Катализатор</span> - то же
+                самое, что маг
+              </li>
+              <li class="glossary__list-item">
+                <span class="label">Демид</span> -
+              </li>
+              <li class="glossary__list-item">
+                <span class="label">Контракт</span> -
+              </li>
+              <li class="glossary__list-item">
+                <span class="label">Магический облик</span> -
+              </li>
+            </ul>
+            <button class="page-hint" type="button" data-unlock="stanley">
+              Автор: Стенли Хьюз
+            </button>
           </li>
           <li class="page" data-page-id="bonfis" data-tab="L.B.">
             <h2 class="article-subject">Либр Бонфис - М - 23</h2>
@@ -53,16 +69,16 @@
             />
             <ul class="article__summary">
               <li class="summary-item">
-                <span class="summary-label">Название:</span> Ангел
+                <span class="label">Название:</span> Ангел
               </li>
               <li class="summary-item">
-                <span class="summary-label">Контракт:</span> —
+                <span class="label">Контракт:</span> —
               </li>
               <li class="summary-item">
-                <span class="summary-label">Важность:</span> Крайне высокая
+                <span class="label">Важность:</span> Крайне высокая
               </li>
               <li class="summary-item">
-                <span class="summary-label">Магический облик:</span>
+                <span class="label">Магический облик:</span>
                 Розово-черное кольцо над головой, похожее на нимб, небольшие
                 белые крылья на спине (рудиментные). Нескрываемая деталь облика
                 — отметина в виде розовой искры сзади на шее, напоминающая
@@ -85,11 +101,7 @@
             </p>
           </li>
 
-          <li
-            class="page page--locked"
-            data-page-id="stanley"
-            data-tab="S.H."
-          >
+          <li class="page page--locked" data-page-id="stanley" data-tab="S.H.">
             <h2 class="article-subject">Стэнли Хьюз - М - 31</h2>
             <img
               class="article-portrait portrait-placeholder"
