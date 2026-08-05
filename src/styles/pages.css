@@ -1,10 +1,94 @@
-.pages__article {
+/* Панель закладок: ряд с горизонтальной прокруткой при переполнении */
+.bookmarks {
+  position: absolute;
+  bottom: calc(100% - var(--pages-padding));
+  left: var(--pages-padding);
+  right: var(--pages-padding);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-color) var(--accent-paper-color);
+}
+
+/* .bookmarks::-webkit-scrollbar { height: 6px; }
+.bookmarks::-webkit-scrollbar-thumb {
+  background: var(--accent-paper-color);
+  border-radius: 3px; 
+} */
+
+.bookmarks__list {
+  display: flex;
+  gap: 8px;
+  width: max-content; /* закладки не сжимаются — лучше прокрутка */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bookmark {
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.bookmark--locked { display: none; }
+
+/* Базовый вид — замените под свой дизайн */
+.bookmark__btn {
+  display: block;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px 10px 0 0;
+  background: var(--accent-paper-color);
+  font: var(--title-font);
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.bookmark__btn:hover { background: var(--paper-color); }
+.bookmark--active .bookmark__btn {
+  background: var(--accent-color);
+  font-weight: 700;
+}
+
+/* Листы в стопке. Если у вас это уже сделано — пропустите эти две строки */
+
+.page--locked { display: none; } /* скрытое досье */
+
+/* Анимация «лист приподнялся и встал обратно» */
+@keyframes page-pop {
+  0%   { transform: scale(1); }
+  45%  { transform: scale(1.01); }
+  100% { transform: scale(1); }
+}
+.page--pop { 
+  animation: page-pop 0.45s ease;
+  transform-origin: 50% 0; 
+}
+
+.pages-list {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+}
+
+.page {
+  background-color: var(--paper-color);
+  position: absolute;
+  aspect-ratio: 210 / 297;
+  height: calc(100% - var(--pages-padding) * 2);
+  right: var(--pages-padding);
+  top: var(--pages-padding);
+  box-shadow: 0 2px 8px var(--shadow-color);
   padding: 20px;
   overflow: auto;
   scrollbar-color: var(--accent-paper-color) #00000000;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
+  pointer-events: auto; 
 }
 
 .article-subject {

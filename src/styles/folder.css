@@ -26,25 +26,6 @@
   z-index: 2;
 }
 
-.pages-list {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: var(--pages-padding);
-  list-style: none;
-  margin: 0;
-}
-
-.pages__article {
-  background-color: var(--paper-color);
-  position: absolute;
-  aspect-ratio: 210 / 297;
-  height: calc(100% - var(--pages-padding) * 2);
-  right: var(--pages-padding);
-  top: var(--pages-padding);
-  box-shadow: 0 2px 8px var(--shadow-color);
-}
-
 /* обложка — самый верхний слой (поворачивается) */
 .folder__cover {
   position: absolute;
@@ -60,7 +41,8 @@
   backface-visibility: hidden;
 }
 
-/* технически - не используется, но лучше сохранить если на внутреннюю сторону обложки будет добавлено что-то */
+/* технически - не используется, потому что внутренняя часть обложки это просто однотонный фон,
+ но лучше сохранить если на неё будет добавлено контент */
 .folder__cover.animated {
   transform: rotateY(-180deg);
 }

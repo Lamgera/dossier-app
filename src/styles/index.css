@@ -25,7 +25,7 @@
 }
 
 .lamp-glow {
-  z-index: 9;
+  z-index: 10;
   mix-blend-mode: soft-light;
   background: radial-gradient(
     circle at 55% 45%,
@@ -54,7 +54,7 @@
 }
 
 .lamp-vignette {
-  z-index: 10;
+  z-index: 9;
   mix-blend-mode: multiply;
   background:
     radial-gradient(
@@ -70,4 +70,9 @@
       rgba(255, 255, 255, 0) 70%,
       rgb(7, 13, 10) 100%
     );
+}
+
+::selection {
+  background-color: var(--accent-color); /* Цвет фона выделения (например, желтый) */
+  color: var(--background-color);            /* Цвет самого выделенного текста (черный) */
 }
