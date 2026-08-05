@@ -1,13 +1,11 @@
 /* Панель закладок: ряд с горизонтальной прокруткой при переполнении */
 .bookmarks {
   position: absolute;
-  bottom: calc(100% - var(--pages-padding));
-  left: var(--pages-padding);
+  top: var(--pages-padding);
   right: var(--pages-padding);
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: var(--text-color) var(--accent-paper-color);
+  height: calc(100% - var(--pages-padding) * 2);
+  aspect-ratio: 210 / 297;
+  pointer-events: none; 
 }
 
 /* .bookmarks::-webkit-scrollbar { height: 6px; }
@@ -17,12 +15,25 @@
 } */
 
 .bookmarks__list {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+
   display: flex;
   gap: 8px;
-  width: max-content; /* закладки не сжимаются — лучше прокрутка */
   margin: 0;
   padding: 0;
   list-style: none;
+
+  overflow-x: auto;       /* при переполнении — прокрутка */
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  pointer-events: auto; 
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-color) var(--accent-paper-color);  /* клики возвращаем ленте */
 }
 
 .bookmark {

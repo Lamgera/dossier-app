@@ -72,6 +72,34 @@
     );
 }
 
+@media (prefers-color-scheme: light) {
+  .lamp-glow {
+  background: radial-gradient(
+    circle at 55% 45%,
+    rgb(255, 236, 234) 5%,
+    rgba(255, 203, 195, 0.3) 30%,
+    rgba(0, 0, 0, 0) 50%
+  );
+}
+  
+  .lamp-vignette {
+    background:
+    radial-gradient(
+      circle at 60% 40%,
+      rgb(255, 255, 255) 15%,
+      rgba(0, 0, 0, 0.25) 50%,
+      rgb(7, 13, 10, 0.5) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgb(7, 13, 10,0.5) 0%,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(255, 255, 255, 0) 70%,
+      rgb(7, 13, 10, 0.5) 100%
+    );
+  }
+}
+
 ::selection {
   background-color: var(--accent-color); /* Цвет фона выделения (например, желтый) */
   color: var(--background-color);            /* Цвет самого выделенного текста (черный) */
