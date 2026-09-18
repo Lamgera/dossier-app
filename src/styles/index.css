@@ -100,7 +100,46 @@
   }
 }
 
-::selection {
-  background-color: var(--accent-color); /* Цвет фона выделения (например, желтый) */
-  color: var(--background-color);            /* Цвет самого выделенного текста (черный) */
+@media (max-width: 667px) {
+  .body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-block: 30px 20px;
+  }
+
+  .lamp-vignette {
+    background:
+      radial-gradient(
+        circle at 55% 38%,
+        rgb(255, 255, 255) 30%,
+        rgba(0, 0, 0, 0.28) 68%,
+        rgba(7, 13, 10, 0.75) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(7, 13, 10, 0.45) 0%,
+        rgba(255, 255, 255, 0) 22%,
+        rgba(255, 255, 255, 0) 78%,
+        rgba(7, 13, 10, 0.45) 100%
+      );
+  }
+}
+
+@media (max-width: 1024px) {
+  .lamp-vignette {
+    background:
+      radial-gradient(
+        circle at 58% 40%,
+        rgb(255, 255, 255) 22%,
+        rgba(0, 0, 0, 0.35) 60%,
+        rgba(7, 13, 10, 0.85) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(7, 13, 10, 0.55) 0%,
+        rgba(255, 255, 255, 0) 28%,
+        rgba(255, 255, 255, 0) 72%,
+        rgba(7, 13, 10, 0.55) 100%
+      );
+  }
 }

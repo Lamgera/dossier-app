@@ -13,8 +13,21 @@
   --folder-margin: 50px;
 }
 
+::selection {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
   --background-color: #3D393D;
+  }
+}
+
+/* Адаптив: маленькие экраны */
+@media (max-width: 667px) {
+  :root {
+    --pages-padding: 12px;
+    --folder-margin: 0px;
   }
 }

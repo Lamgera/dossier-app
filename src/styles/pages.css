@@ -156,3 +156,36 @@
   cursor: pointer;
   text-decoration: underline dotted var(--accent-color) 3px;
 }
+
+/* Адаптив: маленькие экраны */
+@media (max-width: 667px) {
+  /* контейнер закладок растягиваем на всю ширину папки */
+  .bookmarks {
+    left: var(--pages-padding);
+    right: var(--pages-padding);
+    aspect-ratio: auto;
+  }
+
+  .bookmark__btn {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  /* лист больше не строится от высоты — теперь он всегда
+     занимает всю доступную ширину и не выходит за край */
+  .page {
+    top: var(--pages-padding);
+    right: var(--pages-padding);
+    bottom: var(--pages-padding);
+    left: var(--pages-padding);
+    height: auto;
+    aspect-ratio: auto;
+    padding: 16px;
+  }
+
+  /* портрет чуть шире, чтобы не образовывалась
+     слишком узкая колонка обтекающего текста */
+  .article-portrait {
+    max-width: 38%;
+  }
+}
