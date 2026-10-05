@@ -4,7 +4,7 @@
   right: var(--pages-padding);
   height: calc(100% - var(--pages-padding) * 2);
   aspect-ratio: 210 / 297;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 /* .bookmarks::-webkit-scrollbar { height: 6px; }
@@ -28,7 +28,7 @@
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: thin;
-  pointer-events: auto; 
+  pointer-events: auto;
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: thin;
@@ -40,7 +40,9 @@
   position: relative;
   z-index: 1;
 }
-.bookmark--locked { display: none; }
+.bookmark--locked {
+  display: none;
+}
 
 .bookmark__btn {
   display: block;
@@ -55,29 +57,39 @@
   transition: background-color 0.2s ease;
 }
 
-.bookmark__btn:hover { background: var(--paper-color); }
+.bookmark__btn:hover {
+  background: var(--paper-color);
+}
 .bookmark--active .bookmark__btn {
   background: var(--accent-color);
   font-weight: 700;
 }
 
-.page--locked { display: none; }
+.page--locked {
+  display: none;
+}
 
 @keyframes page-pop {
-  0%   { transform: scale(1); }
-  45%  { transform: scale(1.01); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-.page--pop { 
+.page--pop {
   animation: page-pop 0.45s ease;
-  transform-origin: 50% 0; 
+  transform-origin: 50% 0;
 }
 
 .pages-list {
   position: relative;
   width: 100%;
   height: 100%;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .page {
@@ -94,7 +106,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  pointer-events: auto; 
+  pointer-events: auto;
 }
 
 .glossary {
@@ -108,7 +120,7 @@
   padding: 2px 0 0 5px;
 }
 
-.glossary__list-item{
+.glossary__list-item {
   padding: 8px 0 0 8px;
 }
 
@@ -140,6 +152,10 @@
   object-fit: cover;
   margin: 0 15px 5px 0;
   display: block;
+  object-fit: cover;
+  background: #d9d9d9;
+  filter: grayscale(100%) contrast(1.1) brightness(1.03); 
+  transition: opacity 0.4s ease;
 }
 
 .summary-item {
@@ -154,7 +170,16 @@
   text-transform: uppercase;
   pointer-events: auto;
   cursor: pointer;
-  text-decoration: underline dotted var(--accent-color) 3px;
+  text-decoration: underline dotted var(--stamp-color) 3px;
+}
+
+.portrait--loading {
+  opacity: 0.35;
+  filter: blur(8px) grayscale(1);
+}
+.portrait--loaded {
+  opacity: 1;
+  filter: none;
 }
 
 /* Адаптив: маленькие экраны */

@@ -1,0 +1,13 @@
+{
+  "name": "dossier-app",
+  "version": "1.0.0",
+  "description": "Проект для ознакомления с авторскими персонажами через интерактивное доссье",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^8.0.7"
+  }
+}

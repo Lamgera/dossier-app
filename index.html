@@ -43,8 +43,7 @@
             </p>
             <ul class="glossary__list">
               <li class="glossary__list-item">
-                <span class="label">Катализатор</span> - то же
-                самое, что маг
+                <span class="label">Катализатор</span> - то же самое, что маг
               </li>
               <li class="glossary__list-item">
                 <span class="label">Демид</span> -
@@ -63,9 +62,11 @@
           <li class="page" data-page-id="bonfis" data-tab="L.B.">
             <h2 class="article-subject">Либр Бонфис - М - 23</h2>
             <img
-              class="article-portrait portrait-placeholder"
+              class="article-portrait"
+              data-portrait-seed="libr-bonfis"
+              data-portrait-gender="м"
               src="./src/images/portrait-placeholder.png"
-              alt="Фотография внешности катализатора"
+              alt="Фото: Либр Бонфис"
             />
             <ul class="article__summary">
               <li class="summary-item">
@@ -104,9 +105,11 @@
           <li class="page page--locked" data-page-id="stanley" data-tab="S.H.">
             <h2 class="article-subject">Стэнли Хьюз - М - 31</h2>
             <img
-              class="article-portrait portrait-placeholder"
+              class="article-portrait"
+              data-portrait-seed="stanley-hughes"
+              data-portrait-gender="м"
               src="./src/images/portrait-placeholder.png"
-              alt="Фотография внешности катализатора"
+              alt="Фото: Стэнли Хьюз"
             />
             <ul class="article__summary">
               <li class="summary-item">
@@ -166,6 +169,7 @@
     </ul>
     <div class="lamp-glow" aria-hidden="true"></div>
     <div class="lamp-vignette" aria-hidden="true"></div>
-    <script src="src/scripts/index.js"></script>
+    <script type="module" src="src/scripts/index.js"></script>
+    <script type="module" src="src/scripts/api.js"></script>
   </body>
 </html>
